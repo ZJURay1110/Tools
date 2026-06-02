@@ -2,7 +2,7 @@
 site_name: Useful Tools
 site_description: 详细的各种电脑工具记录
 site_author: Lucas
-site_url: https://ldra857.github.io/CodingNote/
+site_url: https://ldray857.github.io/CodingNote/
 edit_uri: edit/main/docs/
 
 # 2. 仓库链接（右上角会显示 GitHub 图标）
@@ -47,7 +47,7 @@ extra_css:
 nav:
   - 🏠 首页:
       - 🚀 门户中心: index.md
-      - 📝 关于作者: about.md
+      # - 📝 关于作者: about.md  # 实际目录中暂无此文件，先注释以防报错
       - 🕒 快速导航:
           - 工具配置: tools/index.md
           - 电脑管理: CS/index.md
@@ -60,16 +60,16 @@ nav:
   - 🛠️ 工具使用与配置:
       - 工具箱概览: tools/index.md
       - IDE 配置 (VS Code/VS): 
-          - 概览: tools/as_IDE/01_intro.md
+          # - 概览: tools/as_IDE/01_intro.md  # 实际目录中暂无此文件
           - Visual Studio 实践: tools/as_IDE/02_VS_01.md
       - GIS 工具集:
-          - 环境概览: tools/as_GIS/01_intro.md
+          # - 环境概览: tools/as_GIS/01_intro.md  # 实际目录中暂无此文件
           - GeoServer 部署: tools/as_GIS/02_GeoServer.md
           - ArcGIS 全家桶: tools/as_GIS/03_ArcGIS_01.md
           - ArcGIS Pro 进阶: tools/as_GIS/03_ArcGIS_02.md
       - 计算机基础 (CS):
           - 导论: tools/cs/01_introduction.md
-          - 文件管理: tools/cs/02_file_management.md
+          # - 文件管理: tools/cs/02_file_management.md  # 实际目录中暂无此文件
 
   - 🖥️ 计算机管理与存储:
       - 1 经验总结: CS/index.md
@@ -78,6 +78,10 @@ nav:
       
   - ⚡ AI 工程实践:
       - 1 实践心得: AI/index.md
+      - 2 经典大模型生态:
+          - Anthropic 实践: AI/Anthropic/intro.md
+          - Google AI 实践: AI/Google/intro.md
+          - OpenAI 实践: AI/openAI/intro.md
       
   - 💻 C & C++ 开发:
       - 1 核心指南: c_cpp/index.md
@@ -87,19 +91,30 @@ nav:
       - 2 基础语法:
           - 2.1 简介: python/basic/01_intro.md
           - 2.2 基础入门 01: python/basic/02_basic_01.md
-          - 2.3 基础入门 02: python/basic/02_basic_02.md
-          - 2.4 数据结构: python/basic/03_data.md
-          - 2.5 数值计算: python/basic/04_num.md
-          - 2.6 运算符: python/basic/05_cacul.md
-          - 2.7 布尔类型: python/basic/06_bool.md
+          - 2.3 基础入门 02 (表达式): python/basic/02_basic_02表达式.md
+          - 2.4 内存机制 (RAM): python/basic/02_basic_03内存.md
+          - 2.5 数据结构: python/basic/03_data.md
+          - 2.6 数值计算: python/basic/04_num.md
+          - 2.7 运算符: python/basic/05_cacul.md
           - 2.8 字符串处理: python/basic/07_string.md
-          - 2.9 表达式专题: python/basic/08_表达式.md
-          - 2.10 内存机制 (RAM): python/basic/ram.md
+          - 2.9 序列讲解 01: python/basic/09_序列讲解_01.md
+          - 2.10 序列讲解 02 (函数与方法): python/basic/09_序列讲解_02函数与方法.md
+          - 2.11 Range 机制: python/basic/10_range.md
+          - 2.12 列表 (List): python/basic/11_list.md
+          - 2.13 随机数 (Random): python/basic/12_random.md
+          - 2.14 分支与循环: python/basic/13_分支与循环.md
+          - 2.15 元组 (Tuple): python/basic/14_tuple.md
+          - 2.16 集合 (Set): python/basic/15_set.md
+          - 2.17 字典 (Dic): python/basic/16_dic.md
+          - 2.18 拆包与解包: python/basic/17_拆包与解包.md
+          - 2.19 序列补充: python/basic/18_序列补充.md
+          - 2.20 函数 (Function): python/basic/19_function.md
+          - 2.21 命名与作用空间: python/basic/20_命名与作用空间.md
       
   - 🌍 GIS 算法与开发:
       - 1 GIS 概览: GIS/index.md
       - 2 开发实践: 
-          - 2.1 基础入门: GIS/GIS_DEV/01_intro.md
+          # - 2.1 基础入门: GIS/GIS_DEV/01_intro.md  # 实际目录中暂无此文件
           - 2.2 空间数据发布 (上): GIS/GIS_DEV/04_data_distribute_1.md
           - 2.3 空间数据发布 (下): GIS/GIS_DEV/04_data_distribute_2.md
       
@@ -110,7 +125,7 @@ nav:
           - 2.2 基础: web_dev/JavaScipt/02_基础.md
           - 2.3 数据类型: web_dev/JavaScipt/03数据类型.md
           - 2.4 作用域和事件: web_dev/JavaScipt/04_作用域和事件.md
-          - 2.5 DOM 操作: web_dev/JavaScipt/DOM.md
+          # - 2.5 DOM 操作: web_dev/JavaScipt/DOM.md  # 实际目录中暂无此文件
 
 # 5. Markdown 增强插件（支持公式、警告框、复杂表格）
 markdown_extensions:
