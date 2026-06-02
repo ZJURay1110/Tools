@@ -1,75 +1,114 @@
-# 🌍 GIS 板块 Index
-
-欢迎来到我的 **GIS 知识与工具笔记** 🗺️。本板块系统整理了地理信息系统（GIS）相关的概念、软件工具、开发环境及编程实践，涵盖从基础理论到实战操作的全流程，适合学习和工程应用参考。  
+# GIS 开发
 
 ---
 
-## 📑 目录
-*（点击下方可以直接跳转）*
-  - [🌍 GIS 板块 Index]
-  - [1️⃣ GIS 系统概览
-  - [2️⃣ ArcGIS Pro]
-  - [3️⃣ QGIS]
-  - [4️⃣ VS Code 与 GIS 开发]
-  - [5️⃣ Python 与 GIS]
-  - [6️⃣ 📚 参考资料与扩展]
+## 1 分类简介
+
+地理信息系统开发涉及空间数据的管理、可视化与分析。GIS 工具链覆盖了从桌面制图到服务发布再到前端展示的全流程。
+
+!!! tip ""
+    根据场景快速选择：
+    - 桌面制图与分析 → [ArcGIS Pro](desktop/arcgis_pro.md) 或 [QGIS](desktop/qgis.md)
+    - 发布 OGC 服务 → [GeoServer](server/geoserver.md)
+    - 空间数据库查询 → [PostGIS](spatial_db/postgis.md)
+    - 浏览器地图展示 → [Leaflet](webgis/leaflet.md) 或 [Mapbox GL JS](webgis/mapbox_gl_js.md)
+    - 格式转换 / 栅格处理 → [GDAL](spatial_tool/gdal.md)
+    - Python 脚本空间分析 → [GeoPandas](spatial_tool/geopandas.md)
+    - 遥感影像处理 → [Google Earth Engine](rs/google_earth_engine.md) 或 [ENVI](rs/envi.md)
 
 ---
 
-## 1️⃣ GIS 系统概览
-- 📌 **什么是 GIS**：地理信息系统的定义与基本概念  
-- 🌐 **核心功能**：数据采集、存储、管理、分析与可视化  
-- 🗂️ **空间数据类型**：  
-  - 矢量数据（点、线、面）  
-  - 栅格数据（遥感影像、数字高程模型）  
-  - 属性数据（与空间要素相关的表格信息）  
-- 🔄 **GIS 数据处理流程**：数据采集 → 数据管理 → 空间分析 → 地图可视化  
+## 2 为什么需要这些工具
+
+| 场景 | 痛点 | 解决工具 |
+|------|------|---------|
+| 编辑和符号化空间数据 | QGIS / ArcGIS 功能太复杂不知从何学起 | 桌面 GIS 提供制图模板 + 符号库 + WYSIWYG 排版 |
+| 将地图发布为 Web 服务 | 不懂 OGC 标准、手动切片费时 | 服务端 GIS 自动发布 WMS/WFS/WMTS 标准服务 |
+| 存储和查询空间数据 | 普通数据库不支持几何对象和空间索引 | 空间数据库原生支持 PostGIS 函数和 GiST 索引 |
+| 在网页中渲染地图 | 从零实现地图渲染引擎几乎不可能 | Web GIS 框架一行代码加载瓦片地图 |
+| 数据格式转换频繁 | Shapefile / GeoJSON / GPKG 格式互转繁琐 | 空间数据处理工具一行命令完成格式转换 |
+| 处理卫星影像 | 影像下载、校正、分类知识门槛很高 | 遥感平台提供在线影像浏览和云端分析 |
 
 ---
 
-## 2️⃣ ArcGIS Pro
-- 💻 **ArcGIS Pro 简介**：ESRI 旗舰 GIS 软件，支持桌面制图、分析与三维建模  
-- ⚙️ **核心功能模块**：  
-  - 地图制图与可视化  
-  - 空间分析与地理处理工具  
-  - 三维场景与影像分析  
-- 🗄️ **项目与工作空间管理**：地图文档、地理数据库、图层管理  
-- 🐍 **ArcPy 自动化**：利用 Python 脚本进行数据处理、批量分析和地图输出  
-- 📝 **实战示例**：批量生成地图、自动化数据清理、空间分析任务  
+## 3 子分类速览
+
+### 3.1 桌面 GIS
+
+空间数据编辑、制图、空间分析和地图发布的一体化桌面平台。
+
+| 工具 | 一句话 |
+|------|--------|
+| ArcGIS Pro | ESRI 旗舰桌面 GIS，2D/3D 一体化制图与分析 |
+| QGIS | 开源桌面 GIS 首选，插件丰富，社区活跃 |
+| ArcGIS Desktop | ArcMap 经典版，GIS 老用户的习惯工具 |
+
+> [进入桌面 GIS 分类](desktop/index.md)
+
+### 3.2 服务端 GIS
+
+将空间数据发布为符合 OGC 标准的网络服务（WMS / WFS / WCS / WMTS）。
+
+| 工具 | 一句话 |
+|------|--------|
+| GeoServer | 开源 GIS 服务器首选，WMS/WFS/WCS 全支持 |
+| ArcGIS Server | ESRI 企业级 GIS 服务器，与 ArcGIS 生态无缝协作 |
+| ArcGIS Enterprise | ArcGIS Server + Portal + Data Store 全栈方案 |
+
+> [进入服务端 GIS 分类](server/index.md)
+
+### 3.3 空间数据库
+
+为关系数据库添加空间数据类型、空间索引和支持标准 SQL 的空间查询函数。
+
+| 工具 | 一句话 |
+|------|--------|
+| PostGIS | PostgreSQL 空间扩展，开源 GIS 后端核心 |
+| SpatiaLite | SQLite 的空间扩展，轻量级单文件空间数据库 |
+| Oracle Spatial | Oracle 商业数据库的空间模块，企业级存储方案 |
+
+> [进入空间数据库分类](spatial_db/index.md)
+
+### 3.4 Web GIS 框架
+
+在浏览器中加载和渲染地图的前端 JavaScript 框架。
+
+| 工具 | 一句话 |
+|------|--------|
+| Leaflet | 轻量移动端友好的 JS 地图库，入门首选 |
+| OpenLayers | 功能最全的开源 Web GIS 框架 |
+| Mapbox GL JS | 矢量瓦片 + 3D 地图的前端渲染引擎 |
+| Cesium | 三维地球可视化，支持 WGS84 坐标系和地形 |
+| deck.gl | Uber 出品的大规模数据可视化图层框架 |
+
+> [进入 Web GIS 框架分类](webgis/index.md)
+
+### 3.5 空间数据处理
+
+命令行下的空间数据转换、投影变换和几何操作工具。
+
+| 工具 | 一句话 |
+|------|--------|
+| GDAL | 栅格数据处理的标准库，支持 200+ 格式 |
+| OGR2OGR | 矢量数据格式转换，Shapefile / GeoJSON / GPKG 互转 |
+| GeoPandas | Python 中的空间数据框，Pandas + Shapely 组合 |
+| Fiona | Python 中读写矢量文件的底层接口 |
+
+> [进入空间数据处理分类](spatial_tool/index.md)
+
+### 3.6 遥感
+
+卫星和航空影像的处理、分类、分析和可视化。
+
+| 工具 | 一句话 |
+|------|--------|
+| ENVI | 商业遥感软件，影像预处理和分析标准 |
+| ERDAS Imagine | 历史最久的遥感处理软件之一 |
+| Google Earth Engine | 云端遥感大数据平台，在线脚本分析 PB 级影像 |
+| SNAP | ESA 开源的哨兵卫星数据处理工具 |
+
+> [进入遥感分类](rs/index.md)
 
 ---
 
-## 3️⃣ QGIS
-- 💡 **QGIS 简介**：开源、跨平台 GIS 软件，支持多种插件拓展  
-- 🔌 **常用插件与功能拓展**：地理编码、网络分析、3D 可视化等  
-- 🗺️ **矢量与栅格数据处理**：数据转换、投影管理、空间分析  
-- 🐍 **PyQGIS 编程**：Python API 实现 QGIS 自动化操作和自定义工具  
-- 📊 **实战示例**：批量地图渲染、空间分析工作流自动化  
-
----
-
-## 4️⃣ VS Code 与 GIS 开发
-- 🖥️ **开发环境配置**：VS Code + Python + GIS 库  
-- 🔧 **Python、ArcPy 与 PyQGIS 集成**：在 VS Code 中进行脚本开发和调试  
-- 🐞 **调试与版本控制**：利用 Git 管理 GIS 项目版本，支持多人协作  
-- ⚡ **实战示例**：在 VS Code 中批量处理 shapefile、生成地图报告、自动化数据分析  
-
----
-
-## 5️⃣ Python 与 GIS
-- 🐍 **Python 在 GIS 的核心作用**：数据处理、分析、可视化与自动化  
-- 📦 **常用 Python 库**：  
-  - GeoPandas：空间数据分析与操作  
-  - Shapely：几何对象操作  
-  - Fiona：读写地理数据文件  
-  - Rasterio：栅格数据处理  
-  - Matplotlib / Folium：空间可视化  
-- 🔄 **空间分析与可视化示例**：缓冲区分析、叠置分析、热力图、交互式 Web 地图  
-- 📝 **项目实战**：自动化批量地图生成、空间数据清洗与统计分析  
-
----
-
-## 6️⃣ 📚 参考资料与扩展
-- 🌐 官方文档与教程链接（ESRI、QGIS、Python GIS 库）  
-- 📖 推荐书籍与学习路线  
-- 💬 GIS 社区与开源项目（GIS Stack Exchange、GitHub 仓库）  
+> [回到工具首页](../index.md)

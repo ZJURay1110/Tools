@@ -1,4 +1,4 @@
-# 👋 欢迎来到我的个人经验笔记 
+# Dev Tools | 好用工具持续推荐中
 
 <div style="display: flex; align-items: center; gap: 24px; margin: 25px 0; padding: 20px; background-color: rgba(52, 90, 197, 0.04); border-radius: 12px; border: 1px solid rgba(66, 133, 244, 0.1);">
     <img src="assets/avatar.jpg" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
@@ -14,80 +14,161 @@
 </div>
 
 
-## 一、引言
-
-这是我利用 GitHub 搭建的个人空间。在这里，我记录了一些 **GIS与CS的学习笔记、开发经验、工具配置和工程实践技巧**，方便自己复盘，也希望对你有参考价值。  
-
-本人能力十分有限，大多是内容是自己的经验之谈，如果大家有所需求当然可以参考，如果有多处不当也实属正常，passby的朋友轻点喷。。。
-
-!!! note
-    本人非常非常懒，大部分时间在吃饭，小部分时间在看书，请勿轻易尝试联系本人......  
-    夹带一点私货，本人长期迷上了《蛊真人》，若同为书友可以一起讨论学习😘
-
-
-
-## 二、 分类导航 📂
-
-### 1. 工具使用与配置 🛠️
-* **编程环境**：[IDE 配置 (VS/VS Code)](./tools/as_IDE/01_intro.md) | [C/C++ 编译器](./c_cpp/index.md)
-* **专业工具**：[GIS 相关配置](./tools/as_GIS/01_intro.md) | [Python 环境管理](./python/index.md)
-* **基础素养**：[文件管理与计算机基础](./tools/cs/01_introduction.md)
-* 👉 [查看工具箱概览](./tools/index.md)
-
-
-### 2. 计算机使用感悟 🖥️
-* **经验总结**：日常开发踩坑、系统效率优化。
-* 👉 [进入感悟随笔](./CS/index.md)
-
-
-### 3. AI 工程 ⚡
-* **实践心得**：模型训练、推理与自动化部署。
-* **研究方向**：AI + 物理驱动模型（SRTP 进展）。
-* 👉 [查看 AI 笔记](./AI/index.md)
-
-
-### 4. C & C++ 工程实践 💻
-* **核心指南**：指针、内存管理与工程化建议。
-* **环境联动**：[Visual Studio 实践技巧](./tools/as_IDE/02_VS_01.md)
-* 👉 [查看 C/C++ 专题](./c_cpp/index.md)
-
-
-### 5. Python 工程实践 🐍
-* **实战应用**：自动化脚本、数据分析与 GIS 脚本编写。
-* 👉 [查看 Python 专题](./python/index.md)
-
-
-### 6. GIS 算法与实践 🌍
-* **专业进阶**：[ArcGIS 技巧](./tools/as_GIS/03_ArcGIS_01.md) | [GeoServer 部署](./tools/as_GIS/02_GeoServer.md)
-* **自动化**：Python + GIS 空间分析实战。
-* 👉 [查看 GIS 工程实践](./GIS/index.md)
-
-
-### 7. Web 开发工程 🌐
-* **前端基石**：[JavaScript 核心笔记](./web_dev/JavaScipt/01_简介.md)
-* **地图开发**：基于高德/Leaflet 的 Web GIS 可视化。
-* 👉 [查看 Web 开发工程](./web_dev/index.md)
-  
 ---
 
-## 🛠️ 一些工具与资源
+## 1 关于本仓库
 
-- 编辑器: IDE：VS Code, Visual Studio, CLion  
-- 版本控制：Git, GitHub  
-- 编程语言：Python, C, C++  
-- GIS 工具：ArcGIS Pro, QGIS, GeoPandas  
-- 调试与分析：GDB, LLDB, Pandas, Matplotlib  
+本仓库是一份**工具分类索引与使用指南**。以工具为线索，按开发场景分类，每个工具独立成篇，覆盖安装、配置、常用操作与实战技巧。  
+
+本仓库不涉及语言语法教学与算法讲解，所有内容聚焦于工具本身。
 
 
+## 2 分类导航
+
+### 代码编写
+IDE 与代码编辑器，按通用型与单语言专用型分类。
+
+> [查看代码编写工具](ide/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| 通用 IDE | VS Code, Visual Studio, JetBrains Toolbox, Eclipse, Code::Blocks, Cursor |
+| 单语言 IDE | PyCharm, IntelliJ IDEA, CLion, WebStorm, PhpStorm, DataGrip, RStudio, MATLAB, Arduino IDE |
 
 ---
 
-## 💬 联系我
+### 文件网络传输
+跨网络传输文件的工具。
 
-- GitHub: [https://github.com/ldray857]  
-- 邮箱: [3066443513@qq.com]  
-- 欢迎交流学习经验与开源项目合作 🤝
+> [查看文件传输工具](file_transfer/index.md)
 
-<br/>
+| 子类 | 收录工具 |
+|------|---------|
+| FTP/SFTP 客户端 | FileZilla, WinSCP, Cyberduck |
+| 下载管理器 | Aria2, Motrix, IDM, XDown |
+| BT 客户端 | qBittorrent, Transmission |
+| 远程同步 | SCP/Rsync, Syncthing, Rclone |
+| 网盘工具 | Alist, Rclone GUI |
 
-> "身如柳絮随风扬，无论云泥意贯一。" 🌿
+---
+
+### 文件管理
+本地文件系统管理工具。
+
+> [查看文件管理工具](file_mgr/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| 资源管理器增强 | Everything, Total Commander, One Commander, Directory Opus |
+| 磁盘空间分析 | SpaceSniffer, WinDirStat, TreeSize, WizTree |
+| 压缩解压 | 7-Zip, WinRAR, PeaZip |
+| 同步备份 | FreeFileSync, GoodSync |
+| 重复文件清理 | dupeGuru, Czkawka |
+
+---
+
+### 通用编辑器
+照片处理与文本编辑工具。
+
+> [查看通用编辑器](editor/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| 图片查看 | Honeyview, IrfanView, FastStone |
+| 图像编辑 | GIMP, Paint.NET, Affinity Photo, Inkscape |
+| 截图工具 | Snipaste, ShareX, Flameshot |
+| 屏幕录制 | OBS Studio, Bandicam |
+| 文本编辑器 | Notepad++, Sublime Text, Vim, Emacs |
+| Markdown 笔记 | Typora, Obsidian, MarkText, Notion |
+| 办公套件 | LibreOffice, OnlyOffice |
+
+---
+
+### 前端开发
+Web 前端开发链工具。
+
+> [查看前端开发工具](frontend/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| 浏览器 DevTools | Chrome DevTools, Firefox DevTools |
+| 包管理器 | npm, Yarn, pnpm |
+| 构建工具 | Vite, Webpack, esbuild, Rollup |
+| 前端框架 | React, Vue, Angular, Svelte |
+| UI 组件库 | Tailwind CSS, Bootstrap, Element Plus, Ant Design |
+| 代码检查 | ESLint, Prettier |
+
+---
+
+### 后端开发
+后端开发与运维工具。
+
+> [查看后端开发工具](backend/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| API 调试客户端 | Postman, Insomnia, Apifox, Curl/HTTPie |
+| 关系型数据库 | MySQL, PostgreSQL, SQLite |
+| NoSQL 数据库 | MongoDB, Redis, Elasticsearch |
+| 容器化 | Docker, Docker Compose, Podman |
+| Web 服务器 | Nginx, Apache HTTPD, Caddy |
+| 消息队列 | RabbitMQ, Kafka |
+
+---
+
+### GIS 开发
+地理信息系统相关开发工具。
+
+> [查看 GIS 开发工具](gis/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| 桌面 GIS | ArcGIS Pro, QGIS, ArcGIS Desktop |
+| 服务端 GIS | GeoServer, ArcGIS Server, ArcGIS Enterprise |
+| 空间数据库 | PostGIS, SpatiaLite, Oracle Spatial |
+| Web GIS 框架 | Leaflet, OpenLayers, Mapbox GL JS, Cesium, deck.gl |
+| 空间数据处理 | GDAL, OGR2OGR, GeoPandas, Fiona |
+| 遥感 | ENVI, ERDAS Imagine, Google Earth Engine, SNAP |
+
+---
+
+### 开发辅助工具
+版本控制、终端、对比合并、虚拟机、系统监控、文档生成。
+
+> [查看开发辅助工具](dev_utils/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| 版本控制 | Git, GitHub Desktop, Sourcetree, Lazygit |
+| 终端模拟器 | Windows Terminal, Cmder, Warp, Tabby |
+| 差异对比 | Beyond Compare, Meld, WinMerge |
+| 虚拟机 | VMware Workstation, VirtualBox, WSL |
+| 系统监控 | Process Explorer, HWiNFO, CPU-Z |
+| 文档生成 | Doxygen, Sphinx |
+
+---
+
+### AI 工具
+AI 大语言模型平台与服务。
+
+> [查看 AI 工具](ai/index.md)
+
+| 子类 | 收录工具 |
+|------|---------|
+| OpenAI 生态 | ChatGPT, GPT API, OpenAI Platform |
+| Google AI 生态 | Gemini, Gemini API, Google AI Studio |
+| Anthropic 生态 | Claude, Claude API, Anthropic Console |
+| DeepSeek 生态 | DeepSeek Chat, DeepSeek API |
+| AI 编码代理 | GitHub Copilot, Cursor, Windsurf, Cline, Roo Code |
+| API 中转代理 | OpenAI Translator, Vercel Proxy, Cloudflare AI Gateway, One API |
+
+---
+
+## 联系
+
+- GitHub: [https://github.com/ldray857](https://github.com/ldray857)
+- 邮箱: 3066443513@qq.com
+
+---
+
+> "身如柳絮随风扬，无论云泥意贯一。"

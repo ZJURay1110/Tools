@@ -1,25 +1,24 @@
-# 1. 基本信息
-site_name: Useful Tools
-site_description: 详细的各种电脑工具记录
+# 基本信息
+site_name: Dev Tools Hub
+site_description: 开发者工具分类索引与使用指南
 site_author: Lucas
 site_url: https://ldray857.github.io/CodingNote/
 edit_uri: edit/main/docs/
 
-# 2. 仓库链接（右上角会显示 GitHub 图标）
+# 仓库链接
 repo_name: CodingNote
 repo_url: https://github.com/ldray857/CodingNote
 
-# 3. 主题配置
+# 主题配置
 theme:
   name: material
   language: zh
-  favicon: assets/favicon.png # 如果有图标可以放在这里
+  favicon: assets/favicon.png
   logo: assets/avatar.jpg
-  palette: 
-    # 自动切换深/浅模式
+  palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo # 浙大蓝风格
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-sunny
@@ -32,117 +31,115 @@ theme:
         icon: material/weather-night
         name: 切换至浅色模式
   features:
-    - navigation.tabs           # 顶部一级分类
-    - navigation.sections       # 侧边栏分组
-    - navigation.expand         # 默认展开
-    - navigation.top            # 回到顶部按钮
-    - navigation.footer         # 开启底部“上一页/下一页”导航栏
-    - search.suggest            # 搜索建议
-    - search.highlight          # 搜索关键词高亮
-    - content.code.copy         # 代码块一键复制
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
 extra_css:
   - stylesheets/extra.css
 
-# 4. 导航栏配置（精准匹配最新文件目录）
+# 导航栏配置
 nav:
-  - 🏠 首页:
-      - 🚀 门户中心: index.md
-      # - 📝 关于作者: about.md  # 实际目录中暂无此文件，先注释以防报错
-      - 🕒 快速导航:
-          - 工具配置: tools/index.md
-          - 电脑管理: CS/index.md
-          - AI 实践: AI/index.md
-          - GIS 工程: GIS/index.md
-          - Python 开发: python/index.md
-          - C/C++学习: c_cpp/index.md
-          - 前端开发: web_dev/index.md
+  - 首页:
+      - 门户中心: index.md
 
-  - 🛠️ 工具使用与配置:
-      - 工具箱概览: tools/index.md
-      - IDE 配置 (VS Code/VS): 
-          # - 概览: tools/as_IDE/01_intro.md  # 实际目录中暂无此文件
-          - Visual Studio 实践: tools/as_IDE/02_VS_01.md
-      - GIS 工具集:
-          # - 环境概览: tools/as_GIS/01_intro.md  # 实际目录中暂无此文件
-          - GeoServer 部署: tools/as_GIS/02_GeoServer.md
-          - ArcGIS 全家桶: tools/as_GIS/03_ArcGIS_01.md
-          - ArcGIS Pro 进阶: tools/as_GIS/03_ArcGIS_02.md
-      - 计算机基础 (CS):
-          - 导论: tools/cs/01_introduction.md
-          # - 文件管理: tools/cs/02_file_management.md  # 实际目录中暂无此文件
+  - 代码编写:
+      - 总览: ide/index.md
+      - 通用 IDE: ide/gen_ide/index.md
+      - 环境配置: ide/manage/index.md
+      - 单语言专用 IDE: ide/lang_ide/index.md
 
-  - 🖥️ 计算机管理与存储:
-      - 1 经验总结: CS/index.md
-      - 1.1 存储策略导论: CS/cs_store/01_intro.md
-      - 1.2 电脑C盘清理: CS/cs_store/02_电脑C盘清理.md
-      
-  - ⚡ AI 工程实践:
-      - 1 实践心得: AI/index.md
-      - 2 经典大模型生态:
-          - Anthropic 实践: AI/Anthropic/intro.md
-          - Google AI 实践: AI/Google/intro.md
-          - OpenAI 实践: AI/openAI/intro.md
-      
-  - 💻 C & C++ 开发:
-      - 1 核心指南: c_cpp/index.md
-      
-  - 🐍 Python 编程:
-      - 1 Python 概览: python/index.md
-      - 2 基础语法:
-          - 2.1 简介: python/basic/01_intro.md
-          - 2.2 基础入门 01: python/basic/02_basic_01.md
-          - 2.3 基础入门 02 (表达式): python/basic/02_basic_02表达式.md
-          - 2.4 内存机制 (RAM): python/basic/02_basic_03内存.md
-          - 2.5 数据结构: python/basic/03_data.md
-          - 2.6 数值计算: python/basic/04_num.md
-          - 2.7 运算符: python/basic/05_cacul.md
-          - 2.8 字符串处理: python/basic/07_string.md
-          - 2.9 序列讲解 01: python/basic/09_序列讲解_01.md
-          - 2.10 序列讲解 02 (函数与方法): python/basic/09_序列讲解_02函数与方法.md
-          - 2.11 Range 机制: python/basic/10_range.md
-          - 2.12 列表 (List): python/basic/11_list.md
-          - 2.13 随机数 (Random): python/basic/12_random.md
-          - 2.14 分支与循环: python/basic/13_分支与循环.md
-          - 2.15 元组 (Tuple): python/basic/14_tuple.md
-          - 2.16 集合 (Set): python/basic/15_set.md
-          - 2.17 字典 (Dic): python/basic/16_dic.md
-          - 2.18 拆包与解包: python/basic/17_拆包与解包.md
-          - 2.19 序列补充: python/basic/18_序列补充.md
-          - 2.20 函数 (Function): python/basic/19_function.md
-          - 2.21 命名与作用空间: python/basic/20_命名与作用空间.md
-      
-  - 🌍 GIS 算法与开发:
-      - 1 GIS 概览: GIS/index.md
-      - 2 开发实践: 
-          # - 2.1 基础入门: GIS/GIS_DEV/01_intro.md  # 实际目录中暂无此文件
-          - 2.2 空间数据发布 (上): GIS/GIS_DEV/04_data_distribute_1.md
-          - 2.3 空间数据发布 (下): GIS/GIS_DEV/04_data_distribute_2.md
-      
-  - 🌐 Web 开发工程:
-      - 1 开发概览: web_dev/index.md
-      - 2 JavaScript 专题:
-          - 2.1 简介: web_dev/JavaScipt/01_简介.md
-          - 2.2 基础: web_dev/JavaScipt/02_基础.md
-          - 2.3 数据类型: web_dev/JavaScipt/03数据类型.md
-          - 2.4 作用域和事件: web_dev/JavaScipt/04_作用域和事件.md
-          # - 2.5 DOM 操作: web_dev/JavaScipt/DOM.md  # 实际目录中暂无此文件
+  - 文件网络传输:
+      - 总览: file_transfer/index.md
+      - FTP/SFTP 客户端: file_transfer/ftp/index.md
+      - 下载管理器: file_transfer/dl_mgr/index.md
+      - BT 客户端: file_transfer/torrent/index.md
+      - 远程同步: file_transfer/remote_sync/index.md
+      - 网盘工具: file_transfer/cloud_disk/index.md
 
-# 5. Markdown 增强插件（支持公式、警告框、复杂表格）
+  - 文件管理:
+      - 总览: file_mgr/index.md
+      - 资源管理器增强: file_mgr/explorer/index.md
+      - 磁盘空间分析: file_mgr/disk_scan/index.md
+      - 压缩解压: file_mgr/compress/index.md
+      - 同步备份: file_mgr/sync/index.md
+      - 重复文件清理: file_mgr/dedup/index.md
+
+  - 通用编辑器:
+      - 总览: editor/index.md
+      - 图片查看器: editor/photo/img_view/index.md
+      - 图像编辑: editor/photo/img_edit/index.md
+      - 截图工具: editor/photo/screen_cap/index.md
+      - 屏幕录制: editor/photo/screen_rec/index.md
+      - 文本编辑器: editor/text/txt_edit/index.md
+      - Markdown 笔记: editor/text/md_note/index.md
+      - 办公套件: editor/text/office/index.md
+
+  - 前端开发:
+      - 总览: frontend/index.md
+      - 浏览器 DevTools: frontend/browser_dt/index.md
+      - 包管理器: frontend/pkg_mgr/index.md
+      - 构建工具: frontend/build/index.md
+      - 前端框架: frontend/framework/index.md
+      - UI 组件库: frontend/ui_lib/index.md
+      - 代码检查: frontend/lint/index.md
+
+  - 后端开发:
+      - 总览: backend/index.md
+      - API 调试客户端: backend/api/index.md
+      - 关系型数据库: backend/db/sql_db/index.md
+      - NoSQL 数据库: backend/db/nosql_db/index.md
+      - 容器化: backend/container/index.md
+      - Web 服务器: backend/web_srv/index.md
+      - 消息队列: backend/mq/index.md
+
+  - GIS 开发:
+      - 总览: gis/index.md
+      - 桌面 GIS: gis/desktop/index.md
+      - 服务端 GIS: gis/server/index.md
+      - 空间数据库: gis/spatial_db/index.md
+      - Web GIS 框架: gis/webgis/index.md
+      - 空间数据处理: gis/spatial_tool/index.md
+      - 遥感: gis/rs/index.md
+
+  - 开发辅助工具:
+      - 总览: dev_utils/index.md
+      - 版本控制: dev_utils/vcs/index.md
+      - 终端模拟器: dev_utils/terminal/index.md
+      - 差异对比与合并: dev_utils/diff/index.md
+      - 虚拟机与环境: dev_utils/vm/index.md
+      - 系统监控: dev_utils/sys_mon/index.md
+      - 文档生成: dev_utils/doc/index.md
+
+  - AI 工具:
+      - 总览: ai/index.md
+      - OpenAI 生态: ai/gpt/index.md
+      - Google AI 生态: ai/google/index.md
+      - Anthropic 生态: ai/claude/index.md
+      - DeepSeek 生态: ai/deepseek/index.md
+      - AI 编码代理: ai/agents/index.md
+      - API 中转代理: ai/proxy/index.md
+
+# Markdown 扩展
 markdown_extensions:
-  - admonition            # 提示框 !!! info
-  - pymdownx.details      # 折叠块 ??? note
-  - pymdownx.superfences  # 嵌套代码块
-  - pymdownx.inlinehilite # 行内代码高亮
-  - pymdownx.magiclink    # 自动识别链接
-  - pymdownx.arithmatex:  # 数学公式支持 (GIS 学术必备)
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.arithmatex:
       generic: true
-  - pymdownx.tasklist:    # 待办事项列表
+  - pymdownx.tasklist:
       custom_checkbox: true
-  - tables                # 标准表格
+  - tables
   - toc:
-      permalink: true     # 标题右侧锚点
+      permalink: true
 
-# 6. 额外的 JS/CSS（用于渲染数学公式等）
+# 数学公式渲染
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
