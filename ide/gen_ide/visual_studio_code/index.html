@@ -1,0 +1,3730 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="开发者工具分类索引与使用指南">
+      
+      
+        <meta name="author" content="Lucas">
+      
+      
+        <link rel="canonical" href="https://ldray857.github.io/CodingNote/ide/gen_ide/visual_studio_code/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Visual Studio Code - Dev Tools Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visual-studio-code" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Dev Tools Hub" class="md-header__button md-logo" aria-label="Dev Tools Hub" data-md-component="logo">
+      
+  <img src="../../../assets/avatar.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dev Tools Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Visual Studio Code
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ldray857/CodingNote" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CodingNote
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  代码编写
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../file_transfer/" class="md-tabs__link">
+          
+  
+  
+  文件网络传输
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../file_mgr/" class="md-tabs__link">
+          
+  
+  
+  文件管理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../editor/" class="md-tabs__link">
+          
+  
+  
+  通用编辑器
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../frontend/" class="md-tabs__link">
+          
+  
+  
+  前端开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../backend/" class="md-tabs__link">
+          
+  
+  
+  后端开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../gis/index.md" class="md-tabs__link">
+          
+  
+  
+  GIS 开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../dev_utils/" class="md-tabs__link">
+          
+  
+  
+  开发辅助工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ai/index.md" class="md-tabs__link">
+          
+  
+  
+  AI 工具
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Dev Tools Hub" class="md-nav__button md-logo" aria-label="Dev Tools Hub" data-md-component="logo">
+      
+  <img src="../../../assets/avatar.jpg" alt="logo">
+
+    </a>
+    Dev Tools Hub
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ldray857/CodingNote" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CodingNote
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    门户中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代码编写
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    代码编写
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    通用 IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lang_ide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    单语言专用 IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文件网络传输
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文件网络传输
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_transfer/ftp/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FTP/SFTP 客户端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_transfer/dl_mgr/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    下载管理器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_transfer/torrent/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BT 客户端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_transfer/remote_sync/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    远程同步
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_transfer/cloud_disk/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网盘工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文件管理
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文件管理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_mgr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_mgr/explorer/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资源管理器增强
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_mgr/disk_scan/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    磁盘空间分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_mgr/compress/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    压缩解压
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_mgr/sync/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同步备份
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../file_mgr/dedup/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    重复文件清理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    通用编辑器
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    通用编辑器
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/photo/img_view/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图片查看器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/photo/img_edit/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像编辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/photo/screen_cap/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    截图工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/photo/screen_rec/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    屏幕录制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/text/txt_edit/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文本编辑器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/text/md_note/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown 笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../editor/text/office/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    办公套件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    前端开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/browser_dt/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    浏览器 DevTools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/pkg_mgr/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    包管理器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/build/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    构建工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/framework/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/ui_lib/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI 组件库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frontend/lint/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代码检查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后端开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    后端开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backend/api/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 调试客户端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backend/db/sql_db/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关系型数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backend/db/nosql_db/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NoSQL 数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backend/container/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    容器化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backend/web_srv/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web 服务器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backend/mq/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    消息队列
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GIS 开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GIS 开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gis/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gis/desktop/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    桌面 GIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gis/server/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    服务端 GIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gis/spatial_db/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间数据库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gis/webgis/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web GIS 框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gis/spatial_tool/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间数据处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gis/rs/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    遥感
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发辅助工具
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    开发辅助工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_utils/vcs/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本控制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_utils/terminal/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    终端模拟器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_utils/diff/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    差异对比与合并
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_utils/vm/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    虚拟机与环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_utils/sys_mon/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    系统监控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev_utils/doc/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 工具
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI 工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/gpt/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenAI 生态
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/google/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google AI 生态
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/claude/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anthropic 生态
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/deepseek/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DeepSeek 生态
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/agents/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 编码代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/proxy/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 中转代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 历史与定位
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 核心功能
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 核心功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-intellisense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 IntelliSense 智能代码补全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 调试器集成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 内置 Git 集成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 集成终端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 远程开发
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 安装与配置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 安装与配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 系统需求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 安装步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 必备插件推荐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 常用配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 命令行入口
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 常用操作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 常用操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 核心快捷键速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 多光标与批量编辑（进阶）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-snippet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 用户代码片段（Snippet）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 高级功能
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 高级功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Tasks（任务自动化）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-multi-root-workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Multi-root Workspaces（多根工作区）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-setting-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Setting Sync（设置同步）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 同类对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资源
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="visual-studio-code">Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permanent link">&para;</a></h1>
+<p><em>微软开源跨平台代码编辑器，通过插件生态覆盖全语言开发</em></p>
+<hr />
+<h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Visual Studio Code（简称 VS Code）是目前全球开发者中使用率最高的代码编辑器。它由 Microsoft 开发和维护，基于 Electron 框架构建，采用 MIT 许可证完全开源。尽管本质是一个 Web 技术构建的桌面应用，但通过 <strong>LSP（Language Server Protocol，语言服务协议）</strong> 和 <strong>DAP（Debug Adapter Protocol，调试适配器协议）</strong>，它能提供逼近传统重型 IDE 的代码补全、重构与调试体验。</p>
+<p>VS Code 的核心理念是 <strong>"编辑器即平台"</strong>：本体保持轻量（约 200-300 MB 安装后），所有语言支持和扩展功能通过 Marketplace 的插件按需安装。这让它能同时胜任一个简单的 Markdown 笔记编辑器，和一个包含数十个微服务的大型 TypeScript 工程主开发环境。</p>
+<p><strong>本机版本：</strong> 1.98.2<br />
+<strong>平台：</strong> Windows / macOS / Linux<br />
+<strong>许可证：</strong> MIT（免费开源）  </p>
+<p>!!!</p>
+<h2 id="1">1 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 历史与定位<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>VS Code 于 2015 年 4 月 29 日在 Build 大会上首次发布。彼时前端编辑器市场由 Sublime Text 和 Atom 主导，但 Sublime 的更新节奏缓慢、Atom 性能欠佳。VS Code 的快速迭代（每月一个大版本）和 TypeScript 原生支持迅速赢得了开发者社区。</p>
+<p>至 2024 年，Stack Overflow 开发者调查显示超过 74% 的受访者将 VS Code 作为首选编辑器。</p>
+<div class="admonition note">
+<p class="admonition-title">VS Code 不等于 Visual Studio</p>
+<p>Visual Studio 是微软的全功能 IDE（见本目录下 <code>visual_studio.md</code>），体积达 4-20 GB，深度绑定 .NET/C++ 工作流。VS Code 则是轻量编辑器，侧重"可组装"的灵活性。</p>
+</div>
+<h2 id="2">2 核心功能<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21-intellisense">2.1 IntelliSense 智能代码补全<a class="headerlink" href="#21-intellisense" title="Permanent link">&para;</a></h3>
+<p>VS Code 的代码补全系统叫 IntelliSense。它不只是简单的关键字匹配，而是通过语言服务协议在后台运行对应语言的 Language Server，实时分析项目代码结构，提供以下能力：</p>
+<ul>
+<li><strong>基于语义的补全</strong>：理解变量类型、函数签名、类继承关系</li>
+<li><strong>参数提示</strong>：调用函数时显示参数名称和类型</li>
+<li><strong>快速信息</strong>：悬停变量/函数时显示文档注释</li>
+<li><strong>导入自动管理</strong>：使用未导入的类型时自动添加 import 语句</li>
+</ul>
+<p>在 TypeScript 项目中，这个体验尤为突出。对于 Python，安装 Pylance 插件后能获得同等级别的智能提示。</p>
+<h3 id="22">2.2 调试器集成<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>VS Code 内置了图形化调试系统，支持以下调试操作：</p>
+<ul>
+<li>断点（行断点、条件断点、日志点、命中计数断点）</li>
+<li>单步执行（逐过程 / 逐语句 / 跳出）</li>
+<li>变量查看器（局部变量 / 全局变量 / 监视表达式）</li>
+<li>调用堆栈查看与导航</li>
+<li>调试控制台（交互式 REPL）</li>
+</ul>
+<p>内置支持 Node.js / JavaScript / TypeScript 调试。通过扩展可支持：</p>
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>推荐调试扩展</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>Python Debugger</td>
+</tr>
+<tr>
+<td>C / C++</td>
+<td>C/C++ (Microsoft)</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>Debugger for Java</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>Go</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td>rust-analyzer（内建）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-git">2.3 内置 Git 集成<a class="headerlink" href="#23-git" title="Permanent link">&para;</a></h3>
+<p>VS Code 的源代码管理面板提供了图形化的 Git 操作界面，不需要打开终端：</p>
+<ul>
+<li>查看文件修改状态（M / A / D / U 标记）</li>
+<li>逐行 staged 修改（Stage Selected Ranges）</li>
+<li>差异对比编辑器（Side-by-Side Diff View）</li>
+<li>内联 blame 注释（通过 GitLens 插件）</li>
+<li>分支创建、切换、合并</li>
+<li>远程仓库推送与拉取</li>
+<li>冲突解决（3-way merge editor）</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">增强 Git 体验</p>
+<p>强烈推荐安装 <strong>GitLens</strong> 插件。它可以在每一行末尾显示该行最后的提交者和时间，精确到每一次 commit 的责任追溯。</p>
+</div>
+<h3 id="24">2.4 集成终端<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>在 VS Code 中按 <code>Ctrl+`</code> 可以打开内嵌终端。这个终端与操作系统的 Shell 一致：</p>
+<ul>
+<li>Windows 下默认 PowerShell，可切换为 Git Bash 或 WSL</li>
+<li>支持多终端实例分屏</li>
+<li>终端的输出可以被选中复制</li>
+<li>终端中的文件路径和错误信息可以 Ctrl+Click 跳转</li>
+</ul>
+<p>常用终端操作：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>打开终端</td>
+<td>Ctrl+`</td>
+</tr>
+<tr>
+<td>新建终端</td>
+<td>Ctrl+Shift+`</td>
+</tr>
+<tr>
+<td>切换终端</td>
+<td>Ctrl+PageUp / PageDown</td>
+</tr>
+<tr>
+<td>增大字号</td>
+<td>Ctrl+数字键盘+</td>
+</tr>
+<tr>
+<td>减小字号</td>
+<td>Ctrl+数字键盘-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25">2.5 远程开发<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<p>这是 VS Code 最具差异化竞争力的功能之一。通过 3 个官方扩展，开发者可以在不同环境中编码，但编辑体验完全一致：</p>
+<ul>
+<li><strong>Remote-SSH</strong>：通过 SSH 连接远程 Linux 服务器，所有代码在远端运行，本地只需 VS Code 的 UI</li>
+<li><strong>Remote-Containers</strong>：项目代码在 Docker 容器中编译运行，通过 <code>devcontainer.json</code> 定义环境，实现"克隆即就绪"的开发体验</li>
+<li><strong>Remote-WSL</strong>：在 Windows 上的 WSL（Linux 子系统）中运行代码，比虚拟机更轻量</li>
+</ul>
+<h2 id="3">3 安装与配置<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 系统需求<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>操作系统</strong>：Windows 10/11、macOS 11+、Linux（Debian / Ubuntu / RHEL / Fedora / openSUSE）</li>
+<li><strong>内存</strong>：最低 1 GB（推荐 4 GB 以上）</li>
+<li><strong>磁盘</strong>：安装约 300 MB，插件和缓存额外占用视使用而定</li>
+</ul>
+<h3 id="32">3.2 安装步骤<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p><strong>Windows 安装（推荐 System Installer）</strong></p>
+<ol>
+<li>访问 <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></li>
+<li>下载 <strong>System Installer</strong> 64-bit 版本（User Installer 安装到 AppData，不方便被其他用户使用）</li>
+<li>
+<p>运行安装程序，在 "选择其他任务" 页面，<strong>强烈建议勾选以下选项</strong>：</p>
+</li>
+<li>
+<p><code>将 "通过 Code 打开" 操作添加到 Windows 资源管理器文件上下文菜单</code></p>
+</li>
+<li><code>将 "通过 Code 打开" 操作添加到 Windows 资源管理器目录上下文菜单</code></li>
+<li><code>将 Code 注册为受支持的文件类型的编辑器</code></li>
+<li>
+<p><code>添加到 PATH（需要重新启动 shell）</code></p>
+</li>
+<li>
+<p>安装完成后，在任意目录右键 → "通过 Code 打开" 即可启动</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">安装路径注意事项</p>
+<p>System Installer 默认安装到 <code>C:\Program Files\Microsoft VS Code\</code>。如果磁盘空间紧张，也可以选择 Portable 模式：下载 <code>.zip</code> 版本解压到任意位置，在根目录手动创建 <code>data</code> 文件夹，所有配置和插件都会保存在该文件夹下，方便 U 盘携带。</p>
+</div>
+<h3 id="33">3.3 必备插件推荐<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>插件市场入口：左侧活动栏 → Extensions 图标（<code>Ctrl+Shift+X</code>）</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>插件名</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>语言</td>
+<td>Pylance</td>
+<td>Python 类型检查与智能补全</td>
+</tr>
+<tr>
+<td>语言</td>
+<td>C/C++ (Microsoft)</td>
+<td>C/C++ IntelliSense 与调试</td>
+</tr>
+<tr>
+<td>格式</td>
+<td>Prettier</td>
+<td>代码格式化，保存时自动触发</td>
+</tr>
+<tr>
+<td>代码质量</td>
+<td>ESLint</td>
+<td>JavaScript/TypeScript Linting</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>GitLens</td>
+<td>Git 历史追溯，行级 blame</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>Material Icon Theme</td>
+<td>文件/文件夹图标美化</td>
+</tr>
+<tr>
+<td>协作</td>
+<td>Live Share</td>
+<td>实时结对编程</td>
+</tr>
+<tr>
+<td>容器</td>
+<td>Dev Containers</td>
+<td>Docker 容器内开发</td>
+</tr>
+<tr>
+<td>远程</td>
+<td>Remote-SSH</td>
+<td>远程服务器开发</td>
+</tr>
+<tr>
+<td>颜色</td>
+<td>Color Highlight</td>
+<td>CSS 颜色值可视化</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34">3.4 常用配置<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>打开 Settings UI（<code>Ctrl+,</code>）或 Settings JSON（<code>Ctrl+Shift+P</code> → 搜索 <code>settings.json</code>）：</p>
+<div class="highlight"><pre><span></span><code>{
+    // 编辑器基础
+    &quot;editor.fontSize&quot;: 14,
+    &quot;editor.fontFamily&quot;: &quot;&#39;Cascadia Code&#39;, Consolas, &#39;Courier New&#39;, monospace&quot;,
+    &quot;editor.tabSize&quot;: 2,
+    &quot;editor.insertSpaces&quot;: true,
+    &quot;editor.formatOnSave&quot;: true,
+    &quot;editor.minimap.enabled&quot;: false,        // 建议关闭小地图节省空间
+    &quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,   // 仅显示单词间多余空格
+    &quot;editor.bracketPairColorization.enabled&quot;: true,
+
+    // 文件管理
+    &quot;files.autoSave&quot;: &quot;afterDelay&quot;,          // 1秒后自动保存
+    &quot;files.exclude&quot;: {                       // 搜索时排除的目录
+        &quot;**/node_modules&quot;: true,
+        &quot;**/dist&quot;: true,
+        &quot;**/build&quot;: true
+    },
+
+    // 搜索排除
+    &quot;search.exclude&quot;: {
+        &quot;**/node_modules&quot;: true,
+        &quot;**/dist&quot;: true
+    },
+
+    // 工作区外观
+    &quot;workbench.colorTheme&quot;: &quot;Default Dark Modern&quot;,
+    &quot;workbench.iconTheme&quot;: &quot;material-icon-theme&quot;,
+    &quot;workbench.startupEditor&quot;: &quot;none&quot;,       // 启动时不打开欢迎页
+
+    // 终端
+    &quot;terminal.integrated.fontSize&quot;: 13,
+    &quot;terminal.integrated.defaultProfile.windows&quot;: &quot;PowerShell&quot;
+}
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">关于字体</p>
+<p>Cascadia Code 是微软专为开发者设计的等宽字体，支持连字（ligatures），将 <code>=&gt;</code>、<code>!=</code>、<code>&gt;=</code> 等符号渲染为更美观的合字。如果不习惯也可以使用 Fira Code、JetBrains Mono、Source Code Pro 等替代。</p>
+</div>
+<h3 id="35">3.5 命令行入口<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<p>安装完成后，在任意终端中：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 打开当前目录</span>
+code<span class="w"> </span>.
+
+<span class="c1"># 打开指定文件</span>
+code<span class="w"> </span>app.js
+
+<span class="c1"># 对比两个文件</span>
+code<span class="w"> </span>-d<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># 安装指定插件（CI/CD 场景常用）</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-python.python
+</code></pre></div>
+<h2 id="4">4 常用操作<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 核心快捷键速查<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>Windows / Linux</th>
+<th>macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令面板</td>
+<td>Ctrl+Shift+P</td>
+<td>Cmd+Shift+P</td>
+</tr>
+<tr>
+<td>快速打开文件</td>
+<td>Ctrl+P</td>
+<td>Cmd+P</td>
+</tr>
+<tr>
+<td>全局搜索</td>
+<td>Ctrl+Shift+F</td>
+<td>Cmd+Shift+F</td>
+</tr>
+<tr>
+<td>切换侧边栏</td>
+<td>Ctrl+B</td>
+<td>Cmd+B</td>
+</tr>
+<tr>
+<td>打开终端</td>
+<td>Ctrl+<code>| Ctrl+</code></td>
+<td></td>
+</tr>
+<tr>
+<td>代码格式化</td>
+<td>Shift+Alt+F</td>
+<td>Shift+Option+F</td>
+</tr>
+<tr>
+<td>多光标（鼠标）</td>
+<td>Alt+Click</td>
+<td>Option+Click</td>
+</tr>
+<tr>
+<td>多光标（键盘）</td>
+<td>Ctrl+Alt+Up/Down</td>
+<td>Cmd+Option+Up/Down</td>
+</tr>
+<tr>
+<td>选中所有相同词</td>
+<td>Ctrl+Shift+L</td>
+<td>Cmd+Shift+L</td>
+</tr>
+<tr>
+<td>批量重命名符号</td>
+<td>F2</td>
+<td>F2</td>
+</tr>
+<tr>
+<td>注释切换</td>
+<td>Ctrl+/</td>
+<td>Cmd+/</td>
+</tr>
+<tr>
+<td>缩进 / 反缩进</td>
+<td>Tab / Shift+Tab</td>
+<td>Tab / Shift+Tab</td>
+</tr>
+<tr>
+<td>转到定义</td>
+<td>F12</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>查找所有引用</td>
+<td>Shift+F12</td>
+<td>Shift+F12</td>
+</tr>
+<tr>
+<td>打开 Settings</td>
+<td>Ctrl+,</td>
+<td>Cmd+,</td>
+</tr>
+<tr>
+<td>禅模式</td>
+<td>Ctrl+K Z</td>
+<td>Cmd+K Z</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42">4.2 多光标与批量编辑（进阶）<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>这是 VS Code 最强大的编辑特性之一：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 场景：已有以下三个变量的赋值语句，需要在每个变量前加 const</span>
+<span class="c1">// 原始代码：</span>
+<span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+
+<span class="c1">// 操作：按住 Alt，分别点击 a、b、c 前的位置</span>
+<span class="c1">// 然后输入 const</span>
+<span class="c1">// 结果：</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+
+<span class="c1">// 或者用 Ctrl+Shift+L 一次性选中所有出现的 &quot;= &quot; 进行替换</span>
+</code></pre></div>
+<h3 id="43-snippet">4.3 用户代码片段（Snippet）<a class="headerlink" href="#43-snippet" title="Permanent link">&para;</a></h3>
+<p>定义常用的代码模板以提高效率。以 JavaScript 为例，新建 <code>javascript.json</code> 片段文件：</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;Define Function&quot;: {
+        &quot;prefix&quot;: &quot;Func&quot;,               // 触发词
+        &quot;body&quot;: [
+            &quot;function ${1:Name}(${2:args}) {&quot;,
+            &quot;\t${3: // 函数体}&quot;,
+            &quot;\treturn ${4:result};&quot;,
+            &quot;}&quot;
+        ],
+        &quot;description&quot;: &quot;创建具名函数&quot;
+    }
+}
+</code></pre></div>
+<p>在 <code>.js</code> 文件中输入 <code>Func</code> 然后 Tab，自动展开为函数模板。</p>
+<h2 id="5">5 高级功能<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="51-tasks">5.1 Tasks（任务自动化）<a class="headerlink" href="#51-tasks" title="Permanent link">&para;</a></h3>
+<p>任务允许在 VS Code 内直接调用外部工具（编译器、打包器、测试运行器），替代在终端中手动输入命令。</p>
+<p>配置 <code>.vscode/tasks.json</code>：</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;label&quot;: &quot;TypeScript Build&quot;,
+            &quot;type&quot;: &quot;typescript&quot;,
+            &quot;tsconfig&quot;: &quot;tsconfig.json&quot;,
+            &quot;problemMatcher&quot;: [&quot;$tsc&quot;],
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        },
+        {
+            &quot;label&quot;: &quot;Run Tests&quot;,
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;command&quot;: &quot;npm test&quot;,
+            &quot;group&quot;: &quot;test&quot;,
+            &quot;presentation&quot;: {
+                &quot;reveal&quot;: &quot;always&quot;,
+                &quot;panel&quot;: &quot;new&quot;
+            }
+        }
+    ]
+}
+</code></pre></div>
+<p>之后按 <code>Ctrl+Shift+B</code> 触发默认构建任务。</p>
+<h3 id="52-multi-root-workspaces">5.2 Multi-root Workspaces（多根工作区）<a class="headerlink" href="#52-multi-root-workspaces" title="Permanent link">&para;</a></h3>
+<p>当需要同时编辑多个不相关的项目时（如前端和后端代码分属两个仓库），可以创建 <code>.code-workspace</code> 文件：</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;folders&quot;: [
+        { &quot;name&quot;: &quot;Frontend (React)&quot;, &quot;path&quot;: &quot;./frontend&quot; },
+        { &quot;name&quot;: &quot;Backend (Express)&quot;, &quot;path&quot;: &quot;./backend&quot; }
+    ],
+    &quot;settings&quot;: {
+        // 工作区级别的设置
+        &quot;typescript.tsdk&quot;: &quot;./frontend/node_modules/typescript/lib&quot;
+    }
+}
+</code></pre></div>
+<p>这个功能是 VS Code 区别于大多轻量编辑器的关键差异化特性。</p>
+<h3 id="53-setting-sync">5.3 Setting Sync（设置同步）<a class="headerlink" href="#53-setting-sync" title="Permanent link">&para;</a></h3>
+<p>登录 Microsoft 或 GitHub 账号后，VS Code 的配置、插件、快捷键和代码片段会自动在多台设备间同步。</p>
+<div class="admonition warning">
+<p class="admonition-title">敏感项目注意</p>
+<p>Setting Sync 会将插件列表和配置同步，但不会同步项目源代码。如果你的 settings.json 中包含服务器 IP、密钥等敏感信息，建议使用 <code>Settings Profile</code>（设置配置文件）分离个人设置和工作设置。</p>
+</div>
+<h2 id="6">6 同类对比<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>VS Code</th>
+<th>Sublime Text 4</th>
+<th>Vim / Neovim</th>
+<th>重量级 IDE（IntelliJ 等）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>启动速度</td>
+<td>2-4 秒</td>
+<td>接近瞬时</td>
+<td>瞬时</td>
+<td>10-30 秒</td>
+</tr>
+<tr>
+<td>内存占用</td>
+<td>300-800 MB</td>
+<td>100-300 MB</td>
+<td>10-50 MB</td>
+<td>1-4 GB</td>
+</tr>
+<tr>
+<td>代码补全</td>
+<td>优秀（LSP）</td>
+<td>基础（需插件）</td>
+<td>需配置 LSP</td>
+<td>顶尖（专有引擎）</td>
+</tr>
+<tr>
+<td>Git 集成</td>
+<td>内置</td>
+<td>无（插件）</td>
+<td>无/终端</td>
+<td>优秀（内置）</td>
+</tr>
+<tr>
+<td>远程开发</td>
+<td>原生支持</td>
+<td>不支持</td>
+<td>SSH 终端</td>
+<td>部分支持</td>
+</tr>
+<tr>
+<td>插件生态</td>
+<td>极丰富（4 万+）</td>
+<td>丰富</td>
+<td>丰富（Lua 脚本）</td>
+<td>较丰富</td>
+</tr>
+<tr>
+<td>学习曲线</td>
+<td>低</td>
+<td>中</td>
+<td>高</td>
+<td>中</td>
+</tr>
+<tr>
+<td>免费 / 付费</td>
+<td>免费</td>
+<td>$99（可无限试用）</td>
+<td>免费</td>
+<td>Community 免费 / $249/年</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7">7 注意事项<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">C/C++ 项目注意事项</p>
+<p>如果你的 C++ 项目使用 Visual Studio 编译（MSVC），建议直接在 Visual Studio 中编辑。VS Code 的 C++ IntelliSense 需要手动配置 <code>c_cpp_properties.json</code> 中的 include path，且在大型模板项目（如 UE 引擎）中容易索引不完整。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">中文路径编码问题</p>
+<p>VS Code 的终端在 Windows 下如果使用 GBK 编码（CMD 默认）可能在集成终端中显示中文乱码。解决方法：<code>Ctrl+Shift+P</code> → "Terminal: Select Default Profile" → 选择 PowerShell（UTF-8）。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Portable 模式</p>
+<p>如果需要在没有管理员权限的电脑上使用，或者想将完整环境放在 U 盘。下载 <code>.zip</code> 版本，解压后在根目录创建 <code>data</code> 文件夹。之后所有安装的插件、修改的设置都保存在 <code>data</code> 下，不影响宿主机。</p>
+</div>
+<hr />
+<h2 id="_2">参考资源<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://code.visualstudio.com/">VS Code 官网</a></li>
+<li><a href="https://code.visualstudio.com/docs">VS Code 文档</a></li>
+<li><a href="https://marketplace.visualstudio.com/vscode">VS Code Marketplace</a></li>
+<li><a href="https://github.com/microsoft/vscode">GitHub 仓库</a></li>
+<li><a href="https://microsoft.github.io/language-server-protocol/">LSP 协议规范</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
